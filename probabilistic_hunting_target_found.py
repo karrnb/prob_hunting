@@ -1,6 +1,3 @@
-import random
-from tkinter import Canvas, Frame, BOTH
-from tkinter import Tk
 from custom_enums import Terrain
 from probabilistic_hunting import ProbabilisticHunting
 import random
@@ -38,6 +35,8 @@ class ProbabilisticHunting_TargetFound(ProbabilisticHunting):
         for ii in range(0, self.dimension):
             for jj in range(0, self.dimension):
                 self.Belief[ii][jj] /= self.beta
+
+        self.currentTime += 1
 
 
 if __name__ == '__main__':

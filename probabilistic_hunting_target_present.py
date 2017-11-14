@@ -32,5 +32,7 @@ class ProbabilisticHunting_TargetPresent (ProbabilisticHunting):
             for jj in range (0, self.dimension):
                 self.Belief[ii][jj] /= self.beta
 
+        self.currentTime += 1
+
 if __name__ == '__main__':
     ph = ProbabilisticHunting(50)

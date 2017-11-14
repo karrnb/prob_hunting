@@ -1,10 +1,6 @@
-import random
-from tkinter import Canvas, Frame, BOTH
-from tkinter import Tk
 from custom_enums import Terrain
 from probabilistic_hunting import ProbabilisticHunting
 import random
-
 
 class ProbabilisticHunting_TargetPresent (ProbabilisticHunting):
 
@@ -21,13 +17,9 @@ class ProbabilisticHunting_TargetPresent (ProbabilisticHunting):
         else:
             scaling_factor = self.NotFound_given_Present_Cave
 
-        old_belief_i = self.Belief[i][j]
         belief_present = self.Belief[i][j]
-        belief_not_present = 1 - self.Belief[i][j]
 
         belief_present = belief_present * scaling_factor
-
-        self.beta = self.beta - (old_belief_i - belief_present)
 
         self.Belief[i][j] = belief_present
 

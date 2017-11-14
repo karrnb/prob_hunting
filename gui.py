@@ -1,5 +1,5 @@
 from tkinter import Tk
-from Tkinter import Canvas, Frame, BOTH
+from tkinter import Canvas, Frame, BOTH
 from custom_enums import Terrain
 
 class LandscapeGUI (Frame):

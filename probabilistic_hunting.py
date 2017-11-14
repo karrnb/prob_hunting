@@ -74,6 +74,7 @@ class ProbabilisticHunting:
                 count -= 1
 
         self._setTarget()
+        self.initialise_belief()
 
     def _setTarget(self):
         self.target_i = random.randint(0, self.dimension - 1)
@@ -85,11 +86,11 @@ class ProbabilisticHunting:
                 print(self.Map[i][j].name, end = " ")
             print()
 
-    def initialiseBelief(self):
+    def initialise_belief(self):
         for i in range(0, self.dimension):
             self.Belief.append([])
             for j in range(0, self.dimension):
-                self.Belief.append(1/(self.dimension * self.dimension))
+                self.Belief[i].append(1/(self.dimension * self.dimension))
 
     def updateBelief(self, i, j):
         pass
